@@ -87,7 +87,7 @@ section{padding:110px 60px;}
 .award-badge .ab-icon{font-size:.9rem;}
 .award-badge span{font-size:.76rem;color:var(--amber);font-family:'Space Mono',monospace;letter-spacing:.04em;}
 .stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px;}
-.stat{padding:18px;border:1px solid var(--border);border-radius:14px;background:rgba(120,88,176,.03);transition:border-color .2s,background .2s;}
+.stat{padding:18px;border:1px solid var(--border);border-radius:14px;background:#fff;transition:border-color .2s,background .2s;}
 .stat:hover{border-color:var(--border-hover);background:rgba(120,88,176,.07);}
 .stat-n{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;color:var(--rose);line-height:1;}
 .stat-l{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-top:4px;}
@@ -251,13 +251,28 @@ footer p{font-size:.78rem;color:var(--muted);}
   .hero-layout{flex-direction:column;gap:36px;}
   .hero-photo-wrap{width:220px;margin:0 auto;}
   .scroll-cue{left:24px;position:relative;bottom:auto;margin-top:32px;}
+  /* About text */
+  .about-text{width:100%;min-width:0;overflow-x:hidden;}
+  .sec-title{max-width:100%;word-break:break-word;}
+  .award-badge{max-width:100%;flex-wrap:wrap;}
+  .award-badge span{font-family:'Inter',sans-serif;letter-spacing:0;}
+  /* Stats row */
+  .stats-row{width:100%;gap:10px;}
+  .stat{padding:14px 10px;}
+  .stat-n{font-size:1.6rem;}
+  .stat-l{font-size:.65rem;}
+  /* Hide decorative doodles that overflow on mobile */
+  .pc-doodles{display:none;}
+  #about{overflow:hidden;}
+  .about-grid{width:100%;min-width:0;}
   /* About collage */
-  .photo-collage{width:280px;height:320px;}
-  .pc-main{width:190px;height:240px;}
-  .pc-second{width:150px;height:185px;}
-  .pc-badge-analytical{top:128px;}
+  .photo-collage{width:260px;height:310px;overflow:visible;margin:0 auto;}
+  .pc-main{width:175px;height:220px;left:10px;}
+  .pc-second{width:140px;height:175px;right:10px;}
+  .pc-badge-creative{left:0;top:-10px;}
+  .pc-badge-analytical{top:120px;right:0;}
   /* About */
-  .about-grid{grid-template-columns:1fr;gap:48px;}
+  .about-grid{grid-template-columns:1fr;gap:48px;overflow:hidden;}
   .duality{display:none;}
   .photo-collage{display:block;}
   /* Work cards: fixed min-height instead of aspect-ratio so cards don't blow up on wide phones */
