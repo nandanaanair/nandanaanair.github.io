@@ -383,13 +383,13 @@ footer p{font-size:.78rem;color:var(--muted);}
   <div class="hero-layout">
     <div class="hero-inner">
       <p class="hero-tag"><span></span>UX/UI Designer &amp; Creative Professional</p>
+      <div style="margin-bottom:18px;display:inline-flex;align-items:center;gap:8px;background:rgba(58,160,144,.1);border:1px solid rgba(58,160,144,.3);border-radius:100px;padding:7px 16px;font-size:.78rem;font-family:'Space Mono',monospace;color:var(--mint);letter-spacing:.04em;"><span style="width:7px;height:7px;border-radius:50%;background:var(--mint);display:inline-block;animation:pulse 2s ease-in-out infinite;"></span>open to freelance design opportunities</div>
       <h1 class="hero-name">Nandana<br><span class="outlined">Nair.</span></h1>
-      <p class="hero-role">I craft <span class="hl" id="typeEl">experiences</span><span class="blink">|</span></p>
+      <p class="hero-role">I craft <span class="hl" id="typeEl">experiences</span><span class="blink" id="typeCursor">|</span></p>
       <div class="hero-cta">
         <a href="#work" class="btn btn-rose">View my work →</a>
         <a href="#contact" class="btn btn-ghost">Say hello</a>
       </div>
-      <div style="margin-top:18px;display:inline-flex;align-items:center;gap:8px;background:rgba(58,160,144,.1);border:1px solid rgba(58,160,144,.3);border-radius:100px;padding:7px 16px;font-size:.78rem;font-family:'Space Mono',monospace;color:var(--mint);letter-spacing:.04em;"><span style="width:7px;height:7px;border-radius:50%;background:var(--mint);display:inline-block;animation:pulse 2s ease-in-out infinite;"></span>open to freelance design opportunities</div>
     </div>
     <div class="hero-photo-wrap">
       <img src="photo-hero.jpg" alt="Nandana Nair" class="hero-photo">
@@ -1523,10 +1523,16 @@ drawWave();
 const words = ['experiences','connections','clarity','stories','delight'];
 let wi=0,ci=0,del=false;
 const typeEl = document.getElementById('typeEl');
+const typeCursor = document.getElementById('typeCursor');
+function setCursorBlinking(on){
+  typeCursor.style.animation = on ? '' : 'none';
+  typeCursor.style.opacity = on ? '' : '1';
+}
 function type(){
   const w=words[wi];
+  setCursorBlinking(false);
   del?typeEl.textContent=w.slice(0,--ci):typeEl.textContent=w.slice(0,++ci);
-  if(!del&&ci===w.length){del=true;setTimeout(type,1700);return;}
+  if(!del&&ci===w.length){del=true;setCursorBlinking(true);setTimeout(type,1700);return;}
   if(del&&ci===0){del=false;wi=(wi+1)%words.length;}
   setTimeout(type,del?55:95);
 }
