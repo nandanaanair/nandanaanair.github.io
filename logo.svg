@@ -1,5 +1,5 @@
 <svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
   <rect width="64" height="64" rx="14" fill="#FFF5F8"/>
-  <text x="14" y="52" font-family="Georgia, serif" font-size="50" font-weight="700" fill="#C94D72">n</text>
-  <polygon points="40,40 40,57 44,51 48,59 51,57 47,50 53,50" fill="#7858B0"/>
+  <text x="9" y="50" font-family="Georgia, serif" font-size="46" font-weight="700" fill="#C94D72">n</text>
+  <path d="M 44,34 L 44,53 L 47,47 L 51,56 L 54,54 L 50,46 L 56,46 Z" fill="#7858B0"/>
 </svg>
