@@ -1,10 +1,10 @@
 # ✦ nandanaanair.github.io
 
-> Personal portfolio of **Nandana Nair** — UX/UI Designer based in Thane, Maharashtra.  
-> Built as a single self-contained HTML file. No frameworks. No build tools. Just design.
+> Personal portfolio of **Nandana Nair**, UX/UI Designer based in Thane, Maharashtra.
+> Built as a single self-contained HTML file. No frameworks, no build tools, just design.
 
-[![Live Site](https://img.shields.io/badge/Live%20Site-nandanaanair.github.io-F06B7A?style=for-the-badge&logo=github)](https://nandanaanair.github.io)
-[![Made with HTML](https://img.shields.io/badge/Made%20with-HTML%20%2F%20CSS%20%2F%20JS-9B7FEA?style=for-the-badge)](https://nandanaanair.github.io)
+[![Live Site](https://img.shields.io/badge/Live%20Site-nandanaanair.github.io-C94D72?style=for-the-badge&logo=github)](https://nandanaanair.github.io)
+[![Made with HTML](https://img.shields.io/badge/Made%20with-HTML%20%2F%20CSS%20%2F%20JS-7858B0?style=for-the-badge)](https://nandanaanair.github.io)
 
 ---
 
@@ -16,7 +16,7 @@
 
 ## 📌 About
 
-This is my personal portfolio website — designed and coded by me to showcase my UX/UI work, certifications, and creative side. The design reflects my dual nature as both a creative (music, photography, art) and an analytical thinker (research, strategy, systems).
+This is my personal portfolio website, designed and coded by me to showcase my UX/UI work, experience, certifications, and creative side. The design reflects my dual nature as both a creative (music, art, dance) and an analytical thinker (research, strategy, systems).
 
 ---
 
@@ -24,38 +24,54 @@ This is my personal portfolio website — designed and coded by me to showcase m
 
 | Section | Description |
 |---|---|
-| **Hero** | Animated audio waveform canvas + typewriter role cycling |
-| **About** | Bio, stats, duality visual (Creative ↔ Analytical) |
-| **Work** | 6 projects with hover-reveal details and case study drawers |
-| **Skills** | Design practice, tools, and technical skills |
+| **Hero** | Animated audio waveform canvas + typewriter role cycling, with résumé and contact CTAs |
+| **About** | Bio, stats, photo collage (Creative ↔ Analytical) |
+| **Experience** | Work history (Website Catalog Executive @ Headphone Zone) and education timeline |
+| **Work** | 7 projects with hover-reveal details and interactive case study drawers |
+| **Philosophy** | How I think about design, in four principles |
+| **Testimonials** | Kind words from people I've worked with |
+| **Skills** | Design practice, tools, technical, and soft skills |
 | **Certifications** | 8 certificates with interactive filter (Google / LinkedIn / Udemy) |
-| **Creative** | Music, photography, painting, dance |
-| **Contact** | Email, LinkedIn, Behance, Instagram |
+| **Creative** | Music & singing, painting & digital art, dance |
+| **Contact** | Email, résumé, LinkedIn, Behance, Instagram |
 
 ### Projects
 
 | Project | Type | Case Study |
 |---|---|---|
-| Spotify MoodGuru | UX Design · Music Therapy | ✅ Interactive drawer + Figma proto |
-| Netflix Redesign | UX Case Study · Streaming | ✅ Interactive drawer + Figma proto |
-| HCL Tech Landing Page | UI Design · Enterprise | Figma proto |
-| VisionVibes | App Design · E-commerce | — |
-| SurMilaap | Platform Design · Music | — |
-| Freelancer Dashboard | UI Design · Dashboard | ✅ Interactive drawer + Figma proto |
+| Netflix Redesign | UX Case Study · Streaming | ✅ Interactive drawer |
+| Spotify MoodGuru | UX Design · Music Therapy | ✅ Interactive drawer |
+| Domino's Pizza Redesign | UI/UX · App Redesign | ✅ Interactive drawer |
+| Freelancer Dashboard | UI Design · Dashboard | ✅ Interactive drawer |
+| Nike Parallax Effect | UI Design · Interaction | ✅ Interactive drawer |
+| Desi Dawat | UI Design · 3D Carousel | ✅ Interactive drawer |
+| HCL Tech Landing Page | UI Design · Enterprise | ✅ Interactive drawer |
+
+Deeper case studies live on [Behance](https://www.behance.net/nandanaanair).
 
 ---
 
 ## ⚙️ Tech Stack
 
 ```
-HTML5        — structure and content
-CSS3         — custom design system, animations, responsive layout
-Vanilla JS   — canvas waveform, typewriter, scroll reveal, modal drawers
-Google Fonts — Playfair Display · Inter · Space Mono
-Canvas API   — animated hero waveform (no library)
+HTML5        structure and content
+CSS3         custom design system, animations, responsive layout
+Vanilla JS   canvas waveform, typewriter, scroll reveal, modal drawers
+Google Fonts Playfair Display · Inter · Space Mono
+Canvas API   animated hero waveform (no library)
 ```
 
 No frameworks. No npm. No build step. One file.
+
+### Repo files
+
+| File | Purpose |
+|---|---|
+| `index.html` | The entire site (HTML + CSS + JS in one file) |
+| `logo.svg` | Logo and favicon (lowercase n + cursor) |
+| `Nandana-Nair-Resume.pdf` | Downloadable résumé, linked from nav and contact |
+| `photo-*.jpg` | Hero and about-section photos |
+| `project-*.png` | Project card images |
 
 ---
 
@@ -72,7 +88,7 @@ open index.html
 
 # Or serve locally (optional, for testing)
 npx serve .
-# → visit http://localhost:3000
+# visit http://localhost:3000
 ```
 
 ---
@@ -83,13 +99,13 @@ npx serve .
 Open `index.html` and search for the relevant section:
 
 ```
-Ctrl+F → "nandanaanair03@gmail.com"   ← email
-Ctrl+F → "Say hello"                  ← contact section
-Ctrl+F → "Selected work"              ← work section
+Ctrl+F  "nandanaanair03@gmail.com"   email
+Ctrl+F  "Say hello"                  contact section
+Ctrl+F  "Selected work"              work section
 ```
 
 ### Add a new project card
-Find the `<!-- ── WORK ── -->` comment and copy an existing `.wc` block. Update the title, description, tags, and optionally add a Figma link.
+Find the `<!-- ── WORK ── -->` comment and copy an existing `.wc` block. Update the title, description, tags, and the `openCS('cs-...')` link.
 
 ### Update certifications
 Find the `<!-- ── CERTIFICATIONS ── -->` comment. Copy an existing `.cert-card` block and update the issuer, title, date, and link.
@@ -98,21 +114,13 @@ Find the `<!-- ── CERTIFICATIONS ── -->` comment. Copy an existing `.cer
 1. Copy an existing `<div id="cs-netflix" class="cs-overlay">` block
 2. Give it a new `id` (e.g. `cs-myproject`)
 3. Update the content inside `.cs-dbody`
-4. On your project card, update the `wc-cta` link:
+4. On the project card, point the `wc-cta` link at it:
    ```html
    onclick="event.preventDefault();event.stopPropagation();openCS('cs-myproject')"
    ```
 
-### Replace the embedded CV
-The CV is embedded as a base64 data URI. To update it:
-```bash
-# Encode your new PDF
-base64 -w 0 Your_New_Resume.pdf
-
-# In index.html, find the line starting with:
-# href="data:application/pdf;base64,...
-# Replace the entire base64 string with the new one
-```
+### Update the résumé
+The résumé is a real file in the repo, `Nandana-Nair-Resume.pdf`. Just replace that file (keep the same name) and the nav + contact links pick it up automatically.
 
 ---
 
@@ -120,17 +128,19 @@ base64 -w 0 Your_New_Resume.pdf
 
 | Token | Value |
 |---|---|
-| Background | `#07051A` |
-| Surface | `#100E26` |
-| Rose accent | `#F06B7A` |
-| Amber accent | `#F5A742` |
-| Violet accent | `#9B7FEA` |
-| Mint accent | `#5ECFB8` |
-| Text primary | `#EDE9F9` |
-| Text muted | `#7A6E96` |
+| Background | `#FFF5F8` |
+| Background alt | `#FEEAF2` |
+| Rose accent | `#C94D72` |
+| Amber accent | `#C46855` |
+| Violet accent | `#7858B0` |
+| Mint accent | `#3AA090` |
+| Text primary | `#1A0C14` |
+| Text muted | `#6A3858` |
 | Display font | Playfair Display |
 | Body font | Inter |
 | Mono font | Space Mono |
+
+> Style note: no em dashes or en dashes anywhere in the site copy. Commas, colons, and plain hyphens only.
 
 ---
 
@@ -143,7 +153,7 @@ To update the live site:
 git add index.html
 git commit -m "Update portfolio"
 git push origin main
-# → live in ~60 seconds
+# live in ~60 seconds
 ```
 
 ---
