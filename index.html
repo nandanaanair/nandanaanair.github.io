@@ -1772,6 +1772,15 @@ document.addEventListener('keydown', e=>{
   if(e.key==='Escape') document.querySelectorAll('.cs-overlay.open').forEach(o=>closeCS(o.id));
 });
 
+// Make the entire project card clickable (the "View project" button still works on its own)
+document.querySelectorAll('#work .wc').forEach(card=>{
+  const cta = card.querySelector('.wc-cta[onclick]');
+  if(!cta) return;
+  const m = cta.getAttribute('onclick').match(/openCS\('([^']+)'\)/);
+  if(!m) return;
+  card.addEventListener('click', ()=> openCS(m[1]));
+});
+
 
 // Hamburger menu
 const ham = document.getElementById('navHam');
